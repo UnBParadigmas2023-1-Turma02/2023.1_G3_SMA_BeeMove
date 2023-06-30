@@ -1,31 +1,22 @@
-# RepositorioTemplate
-Esse repositório é para ser utilizado pelos grupos como um template inicial, da home page do Projeto.
-As seções do Template NÃO DEVEM SER OMITIDAS, sendo TODAS RELEVANTES.
+# Bee Move
 
-**!! *Atenção: Renomeie o seu repositório para (Ano.Semestre)_(Grupo)_(Paradigma)_(NomeDoProjeto)*. !!** 
-
-Paradigmas:
- - Funcional
- - Logico
- - SMA
-
-**!! *Não coloque os nomes dos alunos no título do repositório*. !!**
-
-**!! *Exemplo de título correto: 2023.1_G1_Logico_ProjetoRoteirosAereos*. !!**
- 
- (Apague esses comentários)
-
-# NomeDoProjeto
-
-**Disciplina**: FGA0210 - PARADIGMAS DE PROGRAMAÇÃO - T02 <br>
-**Nro do Grupo (de acordo com a Planilha de Divisão dos Grupos)**: XX<br>
-**Paradigma**: XXXXXXXXXX<br>
+**Disciplina**: FGA0210 - PARADIGMAS DE PROGRAMAÇÃO - T04 <br>
+**Nro do Grupo (de acordo com a Planilha de Divisão dos Grupos)**: 03<br>
+**Paradigma**: SMA<br>
 
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| Adrian Soares Lopes | 160000572 |
+| Bianca Sofia Brasil de Oliveira | 190025298 |
+| Daniel Vinicius Ribeiro Alves | 190026375 |
+| Daniela Soares de Oliveira | 180015222 |
+| Eduardo Maia Rezende | 180119231 |
+| Erick Melo Vidal de Oliveira | 190027355 |
+| João Victor Max Bisinotti de Oliveira | 170069991 |
+| Klyssmann Henrique Ferreira de Oliveira | 202028202 |
+| Mariana Oliveira Pires do Rio | 190058455 |
+| Vitor Eduardo Kühl Rodrigues | 190118288 |
 
 ## Sobre 
 Descreva o seu projeto em linhas gerais. 
@@ -36,8 +27,8 @@ Capriche nessa seção, pois ela é a primeira a ser lida pelos interessados no 
 Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcionamento.
 
 ## Instalação 
-**Linguagens**: xxxxxx<br>
-**Tecnologias**: xxxxxx<br>
+**Linguagens**: Python<br>
+**Tecnologias**: Mesa<br>
 Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
 Insira um manual ou um script para auxiliar ainda mais.
 Gifs animados e outras ilustrações são bem-vindos!
@@ -60,8 +51,17 @@ TEMPO: +/- 15min
 ## Participações
 Apresente, brevemente, como cada membro do grupo contribuiu para o projeto.
 |Nome do Membro | Contribuição | Significância da Contribuição para o Projeto (Excelente/Boa/Regular/Ruim/Nula) |
-| -- | -- | -- |
-| Fulano  |  Programação dos Fatos da Base de Conhecimento Lógica | Boa |
+| -- | -- | :-: |
+| Adrian Soares Lopes | - | - |
+| Bianca Sofia Brasil de Oliveira | - | - |
+| Daniel Vinicius Ribeiro Alves | - | - |
+| Daniela Soares de Oliveira | - | - |
+| Eduardo Maia Rezende | - | - |
+| Erick Melo Vidal de Oliveira | - | - |
+| João Victor Max Bisinotti de Oliveira | - | - |
+| Klyssmann Henrique Ferreira de Oliveira | - | - |
+| Mariana Oliveira Pires do Rio | - | - |
+| Vitor Eduardo Kühl Rodrigues |- | - |
 
 ## Outros 
 Quaisquer outras informações sobre o projeto podem ser descritas aqui. Não esqueça, entretanto, de informar sobre:
