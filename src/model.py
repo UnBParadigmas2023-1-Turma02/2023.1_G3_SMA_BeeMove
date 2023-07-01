@@ -3,8 +3,6 @@ from mesa import Model, Agent
 from mesa.time import SimultaneousActivation
 from mesa.space import MultiGrid
 
-
-
 from src.agents.abelhaRainha import AbelhaRainha
 
 class Colmeia(Model):
@@ -19,8 +17,8 @@ class Colmeia(Model):
     ):
 
         self.current_id = 1
-        self.width = 100
-        self.height = 100
+        self.width = 20
+        self.height = 20
 
         self.schedule = SimultaneousActivation(self)
         self.grid = MultiGrid(self.width, self.height, torus=True)

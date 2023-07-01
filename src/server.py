@@ -1,11 +1,10 @@
 import mesa
 
 from src.model import Colmeia
+from src.portrail import agentPortrayal
 from src.render import render
 
-
-canvas_element = mesa.visualization.CanvasGrid(render, 100, 100, 600, 600)
-
+canvas_element = mesa.visualization.CanvasGrid(agentPortrayal, 20, 20, 600, 600)
 
 model_params = {
     "abelhas_iniciais": mesa.visualization.Slider(
@@ -15,7 +14,7 @@ model_params = {
         "População inicial de zangões", 2, 1, 10
     ),
     "colmeia_inicial": mesa.visualization.Slider(
-        "Quantidade inicial de colmeias", 2, 1, 10
+        "Quantidade inicial de colmeias", 1, 1, 10
     ),
     "vida_adicional": mesa.visualization.Slider(
         "Vida adicional ao se alimentar", 50, 1, 100
