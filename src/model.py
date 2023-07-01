@@ -1,8 +1,11 @@
+import mesa
 import src.utils as utils
 from mesa import Model, Agent
 from mesa.time import SimultaneousActivation
 from mesa.space import MultiGrid
-
+import matplotlib.pyplot as plt
+import numpy as np
+from mesa.visualization.ModularVisualization import VisualizationElement
 
 
 from src.agents.abelhaRainha import AbelhaRainha
@@ -31,6 +34,11 @@ class Colmeia(Model):
         self.vida_adicional = vida_adicional
         self.quantidade_defensora = quantidade_defensora
 
+
+        # Esses valores devem ser integrados ao código depois, para atualizar constantemente os seus valores
+        self.quantidade_abelha = [1, 2, 3, 4]
+        self.quantidade_zangao = [1, 2, 3]
+
         # Inicialização das colmeias
         self.groups = []
         for group in range(self.colmeia_inicial):
@@ -46,9 +54,26 @@ class Colmeia(Model):
             q = AbelhaRainha(self.next_id(),self, (x, y))
             self.register(q)
 
+        self.datacollector = mesa.DataCollector(model_reporters={"Número de abelhas": self.collect_abelha,
+                                                                 "Número de zangões": self.collect_zangao,
+                                                                 "Número de defensoras": self.collect_defensora})
+
+    # Código para o gráfico
+    def collect_abelha(self):
+        return len(self.quantidade_abelha)
+
+    def collect_zangao(self):
+        return len(self.quantidade_zangao)
+
+    def collect_defensora(self):
+        # Esse retorno deve seguir o padrão das funções anteriores
+        # Está assim apenas para testes!!!!!!!!!!!!!!!!!!!!!!!!
+        return self.quantidade_defensora
+
 
     def step(self):
         self.schedule.step()
+        self.datacollector.collect(self)
         for x in self.kill_agents:
             self.grid.remove_agent(x)
             self.schedule.remove(x)
