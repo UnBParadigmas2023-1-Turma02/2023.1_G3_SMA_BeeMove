@@ -1,7 +1,7 @@
 import mesa
 from mesa.visualization.modules import ChartModule
 
-from src.model import Colmeia, ColmeiaChartElement
+from src.model import Colmeia
 from src.render import render
 from src.portrail import agentPortrayal
 
