@@ -2,7 +2,8 @@ from src.agents.abelhaRainha import AbelhaRainha
 from src.agents.defensora import Defensora
 from src.agents.operaria import Operaria
 from src.agents.zangao import Zangao
-from src.agents.comida import Comida, Flor
+from src.agents.comida import  Flor #, Comida
+
 
 
 def agentPortrayal(agent):
@@ -20,7 +21,7 @@ def agentPortrayal(agent):
     elif type(agent) is Defensora: 
         portrayal['Shape'] = "src/assets/defensora.jpeg"
         portrayal['Layer'] = 2
-    elif type(agent) is Comida:
+    elif type(agent) is Flor:
         portrayal['Shape'] = "src/assets/flor4.png"
         #portrayal['Shape'] = "circle"
         #portrayal['Color'] = "red"

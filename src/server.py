@@ -6,7 +6,9 @@ from src.portrayal import agentPortrayal
 
 chart_element = ChartModule([{"Label": "Número de abelhas", "Color": "blue"},
                              {"Label": "Número de zangões", "Color": "black"},
-                             {"Label": "Número de defensoras", "Color": "red"}])
+                             {"Label": "Número de defensoras", "Color": "red"},
+                             {"Label": "Número de operárias", "Color": "green"},
+                             ])
 
 canvas_element = mesa.visualization.CanvasGrid(agentPortrayal, 20, 20, 600, 600)
 
@@ -26,8 +28,8 @@ model_params = {
       "quantidade_defensora": mesa.visualization.Slider(
         "Vida adicional ao se alimentar", 50, 1, 100
     ),
-    "raio_flor": mesa.visualization.Slider(
-        "Raio das flores", 5, 1, 50
+    "quantidade_flores": mesa.visualization.Slider(
+        "Quantidade de flores", 1, 1, 2
     ),
 
 }

@@ -3,6 +3,7 @@ from src import utils
 from src.agents.defensora import Defensora
 from src.agents.operaria import Operaria
 from src.agents.zangao import Zangao
+from src.globals import Globals
 
 
 class AbelhaRainha(Agent):
@@ -30,8 +31,8 @@ class AbelhaRainha(Agent):
         # else:
         #     self.reproduzir_contagem -= 1
         
-    def alimentar_rainha():
-        pass
+    def alimentar_rainha(self, agent):
+        self.vida = min(self.vida + self.alimento, self.vida_maxima)
 
     def reproduzir(self, agent):
         # self.model.create_bee(self)
@@ -46,9 +47,12 @@ class AbelhaRainha(Agent):
             
             if probabilidade <= 40:
                 abelha = Zangao(self.model.next_id(), self.model, (xInitial,yInitial),  self)
+                self.model.glob.set_qtd_zangoes()
             elif probabilidade <= 70:
                 abelha = Defensora(self.model.next_id(), self.model,(xInitial,yInitial))
+                self.model.glob.set_qtd_defensoras()
             elif probabilidade <= 100:
                 abelha = Operaria(self.model.next_id(), self.model,(xInitial,yInitial), self)
+                self.model.glob.set_qtd_operarias()
                 
             self.model.create_bee(abelha)

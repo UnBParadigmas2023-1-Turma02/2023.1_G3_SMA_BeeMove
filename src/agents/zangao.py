@@ -52,7 +52,7 @@ class Zangao(Agent):
             probabilidade = get_random_number(0, 100)
             if probabilidade <= 60:
                 # Reprodução bem-sucedida, cria nova abelha
-                print(self)
+                #print(self)
                 rainha.reproduzir(rainha)
                  # Se bem sucedida, o macho morre
         else: pass
