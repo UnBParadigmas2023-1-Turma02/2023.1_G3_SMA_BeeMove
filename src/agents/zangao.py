@@ -1,32 +1,58 @@
+from asyncio.windows_events import INFINITE
 from mesa import Agent
-from src.agents.operaria import Operaria
+from src.utils import calculate_distance, get_random_number
+import math
 
 
 class Zangao(Agent):
-    def __init__(self, current_id, model, pos, origin):
+    def __init__(self, current_id, model, pos, posRainha):
         super().__init__(current_id, model)
         self.tipo = "Macho"
         self.vida_maxima = 50
         self.vida = self.vida_maxima
         self.pos = pos
+        self.posRainha = posRainha
 
     def step(self):
         # Encontra abelha rainha para reproduzir
-        rainhas = self.model.encontrar_abelhas_por_tipo("Rainha")
-        if rainhas:
-            rainha = self.model.escolher_abelha_aleatoria(rainhas)
-            if rainha.unique_id != self.unique_id:
-                self.reproduzir_com_rainha(rainha)
+        # rainhas = self.get_all_queens()
+        # print(rainhas)
+        # escolhida = None
+        # menor = math.inf
+        # if rainhas:
+        #     for queen in rainhas:
+        #         if calculate_distance(self.pos, queen.pos) < menor:
+        #             escolhida = queen 
+
+            dx = self.posRainha.pos[0] - self.pos[0]    
+            dy = self.posRainha.pos[1] - self.pos[1]
+
+            xAtual = self.pos[0]
+            yAtual = self.pos[1]
+            if dx > 0:
+               xAtual += 1
+            elif dx < 0:                      
+                xAtual -= 1
+            
+            if dy > 0:
+                yAtual += 1
+            elif dy < 0:                      
+                yAtual -= 1
+            
+            self.model.grid.move_agent(self, (xAtual, yAtual))
+            if self.pos == self.posRainha.pos:
+                self.reproduzir_com_rainha(self.posRainha)
+                if self.vida <= 0:
+                    self.model.kill_list.append(self)
 
     def reproduzir_com_rainha(self, rainha):
         # Verifica se a reprodução é bem-sucedida
-        probabilidade = self.model.gerar_numero_aleatorio(0, 100)
-        if probabilidade <= 50:
+        probabilidade = get_random_number(0, 100)
+        if probabilidade <= 70:
             # Reprodução bem-sucedida, cria nova abelha
-            abelha = Operaria(self.model.next_id(), self.model)
-            self.model.adicionar_abelha_na_colmeia(abelha)
+            rainha.reproduzir()
             self.vida = -1 # Se bem sucedida, o macho morre
-            
+
     def revoada(self): # caçada de acasalamento
         if self.origin == -1:
             return (lambda ovario: (ovario[0], ovario[1]))(self.random.choice(self.model.groups))
@@ -34,3 +60,10 @@ class Zangao(Agent):
             return self.random.choice(
                 list(set([(x, y) for x, y,  in self.model.groups]).difference([self.origin]))
             )
+
+    def get_all_queens(self):
+        all_queens = []
+        for agent in self.model.grid.iter_neighborhood(self.pos, True, False,  math.inf):
+            if agent.tipo == "Rainha":
+                all_queens.append(agent)
+        return all_queens

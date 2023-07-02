@@ -30,7 +30,7 @@ class Colmeia(Model):
         self.vida_adicional = vida_adicional
         self.quantidade_defensora = quantidade_defensora
 
-
+        self.kill_list = []
         # Esses valores devem ser integrados ao código depois, para atualizar constantemente os seus valores
         self.quantidade_abelha = [1, 2, 3, 4]
         self.quantidade_zangao = [1, 2, 3]
@@ -45,16 +45,18 @@ class Colmeia(Model):
             ))
 
         # Inicialização da rainha
+        rainhas = []
         for abelha in range(self.colmeia_inicial):
             x, y, _ = self.groups[abelha % self.colmeia_inicial]
             q = AbelhaRainha(self.next_id(),self, (x, y))
+            rainhas.append(q)
             self.register(q)
             
             
         # Inicializar Zangao
         for abelha in range(self.colmeia_inicial):
             x, y, _ = self.groups[abelha % self.colmeia_inicial]
-            m = Zangao(self.next_id(), self, utils.random_pos(self.width, self.height), -1)
+            m = Zangao(self.next_id(), self, utils.random_pos(self.width, self.height), rainhas[0])
             self.register(m)
 
         self.datacollector = mesa.DataCollector(model_reporters={"Número de abelhas": self.collect_abelha,
@@ -77,11 +79,12 @@ class Colmeia(Model):
     def step(self):
         self.schedule.step()
         self.datacollector.collect(self)
-        
-        for x in self.kill_agents:
+        print(self.kill_list)
+        for x in self.kill_list:
+            print(self.kill_list)
             self.grid.remove_agent(x)
             self.schedule.remove(x)
-        self.kill_agents = []
+        self.kill_list = []
 
 
     def register(self, agent: Agent):

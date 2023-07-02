@@ -18,7 +18,8 @@ class AbelhaRainha(Agent):
     def step(self):
         # Verifica a vida da abelha rainha e se adiciona na lista de mortos
         if self.vida <= 0:
-            self.model.kill_agents.append(self)
+            pass
+            # self.model.kill_agents.append(self)
         else:
             self.vida -= 1
             
@@ -31,16 +32,19 @@ class AbelhaRainha(Agent):
         
         
 
-    def reproduce(self):
-        self.model.criar_abelha(self)
+    def reproduzir(self):
+        pass
+        # self.model.criar_abelha(self)
         # Criar novas abelhas na colmeia (modelo)
-        num_filhotes = self.model.gerar_numero_aleatorio(6, 12)
-        for _ in range(num_filhotes):
-            probabilidade = self.model.gerar_numero_aleatorio(0, 100)
-            if probabilidade <= 25:
-                abelha = Zangao(self.model.next_id(), self.model)
-            elif probabilidade <= 85:
-                abelha = Operaria(self.model.next_id(), self.model)
-            else:
-                abelha = Defensora(self.model.next_id(), self.model)
-            self.model.adicionar_abelha_na_colmeia(abelha)
+        # num_filhotes = self.model.gerar_numero_aleatorio(6, 12)
+        # for _ in range(num_filhotes):
+        #     probabilidade = self.model.gerar_numero_aleatorio(0, 100)
+        #     if probabilidade <= 25:
+        #         abelha = Zangao(self.model.next_id(), self.model)
+        #     elif probabilidade <= 80:
+        #         abelha = Operaria(self.model.next_id(), self.model)
+        #     elif probabilidade <= 93:
+        #         abelha = Defensora(self.model.next_id(), self.model)
+        #     else: 
+        #         abelha = AbelhaRainha(self.model.next_id(), self.model)
+        #     self.model.adicionar_abelha_na_colmeia(abelha)
