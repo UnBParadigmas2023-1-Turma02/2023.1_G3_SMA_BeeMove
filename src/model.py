@@ -94,10 +94,9 @@ class Colmeia(Model):
 
 
     def create_bee(self, agent):
-            queen_group_color = utils.get_group_color(self.groups, (agent.pos[0], agent.pos[1]))
             new_ant = agent
             self.register(new_ant)
 
-    def register(self, agent: Agent):
+    def register(self, agent):
         self.grid.place_agent(agent, agent.pos)
         self.schedule.add(agent)
