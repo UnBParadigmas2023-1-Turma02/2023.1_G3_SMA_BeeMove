@@ -50,7 +50,7 @@ class Zangao(Agent):
         if rainha.tipo == "Rainha" and self.vida > 0:
             self.vida = -1
             probabilidade = get_random_number(0, 100)
-            if probabilidade <= 90:
+            if probabilidade <= 60:
                 # Reprodução bem-sucedida, cria nova abelha
                 print(self)
                 rainha.reproduzir(rainha)

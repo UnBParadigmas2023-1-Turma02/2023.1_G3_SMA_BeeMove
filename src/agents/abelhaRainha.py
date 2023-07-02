@@ -1,4 +1,5 @@
 from mesa import Agent
+from src import utils
 from src.agents.defensora import Defensora
 from src.agents.operaria import Operaria
 from src.agents.zangao import Zangao
@@ -16,35 +17,38 @@ class AbelhaRainha(Agent):
         self.reproduzir_contagem = self.reproduzir_intervalo
 
     def step(self):
-        # Verifica a vida da abelha rainha e se adiciona na lista de mortos
+        # # Verifica a vida da abelha rainha e se adiciona na lista de mortos
         if self.vida <= 0:
-            pass
-            # self.model.kill_agents.append(self)
+            self.model.kill_agents.append(self)
         else:
             self.vida -= 1
             
-        # Verificar se é hora de reproduzir
-        if self.reproduzir_contagem <= 0:
-            self.reproduzir()
-            self.reproduzir_contagem = self.reproduzir_intervalo
-        else:
-            self.reproduzir_contagem -= 1
+        # # Verificar se é hora de reproduzir
+        # if self.reproduzir_contagem <= 0:
+        #     self.reproduzir()
+        #     self.reproduzir_contagem = self.reproduzir_intervalo
+        # else:
+        #     self.reproduzir_contagem -= 1
         
-        
-
-    def reproduzir(self):
+    def alimentar_rainha():
         pass
-        # self.model.criar_abelha(self)
+
+    def reproduzir(self, agent):
+        # self.model.create_bee(self)
         # Criar novas abelhas na colmeia (modelo)
-        # num_filhotes = self.model.gerar_numero_aleatorio(6, 12)
-        # for _ in range(num_filhotes):
-        #     probabilidade = self.model.gerar_numero_aleatorio(0, 100)
-        #     if probabilidade <= 25:
-        #         abelha = Zangao(self.model.next_id(), self.model)
-        #     elif probabilidade <= 80:
-        #         abelha = Operaria(self.model.next_id(), self.model)
-        #     elif probabilidade <= 93:
-        #         abelha = Defensora(self.model.next_id(), self.model)
-        #     else: 
-        #         abelha = AbelhaRainha(self.model.next_id(), self.model)
-        #     self.model.adicionar_abelha_na_colmeia(abelha)
+        num_filhotes = utils.get_random_number(5,8)
+
+        for _ in range(num_filhotes):
+            radius = utils.get_random_number(1, 20)
+            xInitial = agent.pos[0] - (radius + utils.get_random_number(-3,3))
+            yInitial = agent.pos[1] - (radius + utils.get_random_number(-3,3))
+            probabilidade = utils.get_random_number(0, 100)
+            
+            if probabilidade <= 40:
+                abelha = Zangao(self.model.next_id(), self.model, (xInitial,yInitial),  self)
+            elif probabilidade <= 70:
+                abelha = Defensora(self.model.next_id(), self.model,(xInitial,yInitial))
+            elif probabilidade <= 100:
+                abelha = Operaria(self.model.next_id(), self.model,(xInitial,yInitial), self)
+                
+            self.model.create_bee(abelha)

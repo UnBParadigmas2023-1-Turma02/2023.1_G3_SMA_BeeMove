@@ -1,13 +1,15 @@
 from mesa import Agent
+from src.agents.comida import Flor
 
 class Operaria(Agent):
-    def __init__(self, unique_id, model, pos, posRainha):
-        super().__init__(unique_id, model)
+    def __init__(self, current_id, model, pos, posRainha):
+        super().__init__(current_id, model)
         self.tipo = "Operaria"
         self.vida_maxima = 80
         self.pos = pos
         self.posRainha = posRainha
         self.vida = self.vida_maxima
+        # self.posComida = posComida
 
     def step(self):
         # Sai da comeia atras de comida

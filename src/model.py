@@ -60,8 +60,9 @@ class Colmeia(Model):
             rainhas.append(q)
             self.register(q)
 
-        self.comida = Comida(self.next_id(), self, self.raio_flor)
-        self.register(self.comida)
+        # Iniciar flor
+        # self.comida = Comida(self.next_id(), self, self.raio_flor)
+        # self.register(self.comida)
             
         # Inicializar Zangao
         for abelha in range(self.colmeia_inicial):
@@ -70,11 +71,11 @@ class Colmeia(Model):
             self.register(m)
 
         # Iniciar Operaria
-        operaria = []
-        for abelha in range(self.colmeia_inicial):
-            x, y, _ = self.groups[abelha % self.colmeia_inicial]
-            m = Operaria(self.next_id(), self, utils.random_pos(self.width, self.height), rainhas[0])
-            self.register(m)
+        # operaria = []
+        # for abelha in range(self.colmeia_inicial):
+        #     x, y, _ = self.groups[abelha % self.colmeia_inicial]
+        #     m = Operaria(self.next_id(), self, utils.random_pos(self.width, self.height), rainhas[0])
+        #     self.register(m)
 
         self.datacollector = mesa.DataCollector(model_reporters={"Número de abelhas": self.collect_abelha,
                                                                  "Número de zangões": self.collect_zangao,

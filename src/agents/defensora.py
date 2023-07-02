@@ -8,6 +8,7 @@ class Defensora(Agent):
         self.vida_maxima = 120
         self.vida = self.vida_maxima
         self.poder_ataque = 10
+        self.pos = pos
 
     def detecta_ameaca(self):
         neighbors = self.model.grid.get_neighbors(self.pos, moore=True)
