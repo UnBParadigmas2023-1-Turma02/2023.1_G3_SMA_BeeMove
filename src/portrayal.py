@@ -21,7 +21,7 @@ def agentPortrayal(agent):
         portrayal['Shape'] = "src/assets/defensora.jpeg"
         portrayal['Layer'] = 2
     elif type(agent) is Comida:
-        portrayal['Shape'] = "src/assets/flor2.png"
+        portrayal['Shape'] = "src/assets/flor4.png"
         #portrayal['Shape'] = "circle"
         #portrayal['Color'] = "red"
         portrayal['Layer'] = 2
