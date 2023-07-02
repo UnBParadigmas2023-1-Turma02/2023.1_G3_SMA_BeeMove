@@ -47,12 +47,12 @@ class AbelhaRainha(Agent):
             
             if probabilidade <= 40:
                 abelha = Zangao(self.model.next_id(), self.model, (xInitial,yInitial),  self)
-                self.model.glob.set_qtd_zangoes()
-            elif probabilidade <= 70:
-                abelha = Defensora(self.model.next_id(), self.model,(xInitial,yInitial))
-                self.model.glob.set_qtd_defensoras()
-            elif probabilidade <= 100:
+                self.model.glob.set_qtd_zangoes(False)
+            elif probabilidade <= 80:
                 abelha = Operaria(self.model.next_id(), self.model,(xInitial,yInitial), self)
-                self.model.glob.set_qtd_operarias()
+                self.model.glob.set_qtd_operarias(False)
+            elif probabilidade <= 100:
+                abelha = Defensora(self.model.next_id(), self.model,(xInitial,yInitial))
+                self.model.glob.set_qtd_defensoras(False)
                 
             self.model.create_bee(abelha)

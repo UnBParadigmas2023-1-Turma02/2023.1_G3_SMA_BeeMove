@@ -1,9 +1,9 @@
 class Globals:
 
     def __init__(self):
-        self.qtd_abelhas = 0
+        self.qtd_abelhas = 2
         self.qtd_defensoras = 0
-        self.qtd_zangoes = 0
+        self.qtd_zangoes = 1
         self.qtd_operarias = 0
     
     def get_qtd_abelhas(self):
@@ -21,11 +21,20 @@ class Globals:
     def set_qtd_abelhas(self):
         self.qtd_abelhas += 1
 
-    def set_qtd_defensoras(self):
-        self.qtd_defensoras += 1
+    def set_qtd_defensoras(self, morte):
+        if morte is False:
+            self.qtd_defensoras += 1
+        else:
+            self.qtd_defensoras -= 1
 
-    def set_qtd_zangoes(self):
-        self.qtd_zangoes += 1
+    def set_qtd_zangoes(self, morte):
+        if morte is False:
+            self.qtd_zangoes += 1
+        else:
+            self.qtd_zangoes -= 1
 
-    def set_qtd_operarias(self):
-        self.qtd_operarias += 1
+    def set_qtd_operarias(self, morte):
+        if morte is False:
+            self.qtd_operarias += 1
+        else:
+            self.qtd_operarias -= 1

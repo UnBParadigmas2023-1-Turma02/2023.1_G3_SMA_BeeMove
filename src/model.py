@@ -107,8 +107,8 @@ class Colmeia(Model):
     
     def atualiza_qtds(self):
         self.qtd_abelhas = self.glob.get_qtd_abelhas()
-        self.qtd_defensoras = self.glob.get_qtd_zangoes()
-        self.qtd_zangoes = self.glob.get_qtd_defensoras()
+        self.qtd_defensoras = self.glob.get_qtd_defensoras()
+        self.qtd_zangoes = self.glob.get_qtd_zangoes()
         self.qtd_operarias = self.glob.get_qtd_operarias()
 
 
@@ -121,6 +121,12 @@ class Colmeia(Model):
             #print(self.kill_list)
             self.grid.remove_agent(x)
             self.schedule.remove(x)
+            if type(x) is Defensora:
+                self.glob.set_qtd_defensoras(True)
+            elif type(x) is Zangao:
+                self.glob.set_qtd_zangoes(True)
+            elif type(x) is Operaria:
+                self.glob.set_qtd_operarias(True)
         self.kill_list = []
 
     def create_bee(self, agent):

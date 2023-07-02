@@ -30,6 +30,3 @@ class Defensora(Agent):
                     if neighbor.colmeia == self.colmeia:
                         continue
                     self.model.kill_list.append(neighbor)
-
-
-        self.pos = pos
