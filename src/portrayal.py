@@ -11,7 +11,7 @@ def agentPortrayal(agent):
                 "r": 1}
     if type(agent) is AbelhaRainha: 
         portrayal['Shape'] = "src/assets/rainha.jpeg"
-        portrayal['Layer'] = 2
+        portrayal['Layer'] = 10
     elif type(agent) is Zangao: 
         portrayal['Shape'] = "src/assets/zangao.jpeg"
         portrayal['Layer'] = 3

@@ -48,9 +48,8 @@ class AbelhaRainha(Agent):
                 zangoes_mortos += 1
 
         for i in range(num_filhotes):
-            radius = utils.get_random_number(1, 20)
-            xInitial = agent.pos[0] - (radius + utils.get_random_number(-3,3))
-            yInitial = agent.pos[1] - (radius + utils.get_random_number(-3,3))
+            xInitial = utils.get_random_number(0,19)
+            yInitial = utils.get_random_number(0,19)
             probabilidade = utils.get_random_number(0, 100)
 
             if self.model.glob.get_qtd_zangoes() - zangoes_mortos <= 1:
@@ -60,7 +59,7 @@ class AbelhaRainha(Agent):
             elif probabilidade <= 30 and cria_zangao == True:
                 abelha = Zangao(self.model.next_id(), self.model, (xInitial,yInitial),  self)
                 self.model.glob.set_qtd_zangoes(False)
-            elif probabilidade <= 60:
+            elif probabilidade <= 40:
                 abelha = Defensora(self.model.next_id(), self.model,(xInitial,yInitial))
                 self.model.glob.set_qtd_defensoras(False)
             elif probabilidade <= 100:
