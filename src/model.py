@@ -1,10 +1,14 @@
+from random import randint
 import mesa
+from src.agents.defensora import Defensora
+from src.agents.operaria import Operaria
 from src.agents.zangao import Zangao
 import src.utils as utils
 from mesa import Model, Agent
 from mesa.time import SimultaneousActivation
 from mesa.space import MultiGrid
 from src.agents.abelhaRainha import AbelhaRainha
+
 
 class Colmeia(Model):
 
@@ -24,16 +28,16 @@ class Colmeia(Model):
         self.schedule = SimultaneousActivation(self)
         self.grid = MultiGrid(self.width, self.height, torus=True)
 
-        self.abelhas_iniciais = abelhas_iniciais
-        self.zangao_inicial = zangao_inicial
         self.colmeia_inicial = colmeia_inicial
         self.vida_adicional = vida_adicional
-        self.quantidade_defensora = quantidade_defensora
+     
 
         self.kill_list = []
+
         # Esses valores devem ser integrados ao código depois, para atualizar constantemente os seus valores
         self.quantidade_abelha = [1, 2, 3, 4]
         self.quantidade_zangao = [1, 2, 3]
+        self.quantidade_defensora = quantidade_defensora
 
         # Inicialização das colmeias
         self.groups = []
@@ -86,6 +90,13 @@ class Colmeia(Model):
             self.schedule.remove(x)
         self.kill_list = []
 
+
+
+
+    def create_bee(self, agent):
+            queen_group_color = utils.get_group_color(self.groups, (agent.pos[0], agent.pos[1]))
+            new_ant = agent
+            self.register(new_ant)
 
     def register(self, agent: Agent):
         self.grid.place_agent(agent, agent.pos)

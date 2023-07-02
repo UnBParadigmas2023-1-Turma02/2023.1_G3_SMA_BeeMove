@@ -22,6 +22,7 @@ def get_item(self, agent_type):
             return agent
 
 
+
 # def get_all_queens(self):
 #     all_queens = []
 #     for agent in self.model.grid.get_cell_list_contents([self.pos]):

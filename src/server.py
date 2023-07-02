@@ -24,9 +24,10 @@ model_params = {
     "vida_adicional": mesa.visualization.Slider(
         "Vida adicional ao se alimentar", 50, 1, 100
     ),
-    "quantidade_defensora": mesa.visualization.Slider(
-        "Quantidade inicial de abelhas defensoras", 5, 1, 50
+      "quantidade_defensora": mesa.visualization.Slider(
+        "Vida adicional ao se alimentar", 50, 1, 100
     ),
+
 }
 
 
