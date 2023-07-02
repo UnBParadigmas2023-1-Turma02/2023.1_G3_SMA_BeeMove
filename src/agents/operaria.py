@@ -29,23 +29,25 @@ class Operaria(Agent):
             self.model.grid.move_agent(self, (xAtual, yAtual))
             if self.pos == self.posComida.pos: #comida
 
-                self.vida = -1 #Perde vida qnd sai
+                self.vida = -1 #Perde vida quando sai da colmeia
                 self.coletarComida(self.posComida)
-                self.vida = -1 #Perde qnd volta p colmeia
+                self.vida = -1 #Perde quando volta pra colmeia
 
                 if self.vida <= 0:
                     self.model.kill_list.append(self)
             
     def coletarComida(self):
-        # Conseguiu pegar comida
-        probabilidade = get_random_number(0, 100) # de encontrar comida
-        if probabilidade <= self.prob_comida:
-            self.prob_comida -= 5 # Decrementa se achar comida
-            # Se achar comida volta pra colmeia
-            self.irColmeia(self.pos, self. self.posRainha)
+            x, y = self.pos
+            # Recupera os agentes presente na celula passada
+            agentes = self.model.grid.get_cell_list_contents((x, y))
+            for agente in agentes:
+                # Se o agente econtrado for uma flor, ela é coletada pela operaria
+                if isinstance(agente, Flor):
+                    self.model.posComida.remove_flor(agente)
+                    break
 
     def irColmeia(self):
-            # A posicao da colmeia eh onde ta a rainha, ela n sai
+            # A posicao da colmeia eh onde ta a rainha, ela nao sai
             dx_c = self. self.posRainha.pos[0] - self.pos[0]    
             dy_c = self. self.posRainha.pos[1] - self.pos[1]
 
@@ -61,10 +63,3 @@ class Operaria(Agent):
                 yAtual_c += 1
             elif dy_c < 0:                      
                 yAtual_c -= 1
-
-    def get_all_food(self): # get all comidas
-        all_food = []
-        for agent in self.model.grid.iter_neighborhood(self.pos, True, False,  math.inf): # que isso
-            if agent.tipo == "Operaria":
-                all_food.append(agent)
-        return all_food
