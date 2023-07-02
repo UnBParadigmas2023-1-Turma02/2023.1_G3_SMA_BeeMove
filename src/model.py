@@ -8,6 +8,8 @@ from mesa import Model, Agent
 from mesa.time import SimultaneousActivation
 from mesa.space import MultiGrid
 from src.agents.abelhaRainha import AbelhaRainha
+from src.agents.comida import Comida
+
 
 
 class Colmeia(Model):
@@ -19,6 +21,7 @@ class Colmeia(Model):
         colmeia_inicial,
         vida_adicional,
         quantidade_defensora,
+        raio_flor,
     ):
 
         self.current_id = 1
@@ -30,6 +33,7 @@ class Colmeia(Model):
 
         self.colmeia_inicial = colmeia_inicial
         self.vida_adicional = vida_adicional
+        self.raio_flor = raio_flor
      
 
         self.kill_list = []
@@ -55,6 +59,9 @@ class Colmeia(Model):
             q = AbelhaRainha(self.next_id(),self, (x, y))
             rainhas.append(q)
             self.register(q)
+
+        self.comida = Comida(self.next_id(), self, self.raio_flor)
+        self.register(self.comida)
             
             
         # Inicializar Zangao
