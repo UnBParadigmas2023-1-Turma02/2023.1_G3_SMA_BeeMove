@@ -63,17 +63,23 @@ class Colmeia(Model):
         self.comida = Comida(self.next_id(), self, self.raio_flor)
         self.register(self.comida)
             
-            
         # Inicializar Zangao
         for abelha in range(self.colmeia_inicial):
             x, y, _ = self.groups[abelha % self.colmeia_inicial]
             m = Zangao(self.next_id(), self, utils.random_pos(self.width, self.height), rainhas[0])
             self.register(m)
 
+        # Iniciar Operaria
+        operaria = []
+        for abelha in range(self.colmeia_inicial):
+            x, y, _ = self.groups[abelha % self.colmeia_inicial]
+            m = Operaria(self.next_id(), self, utils.random_pos(self.width, self.height), rainhas[0])
+            self.register(m)
+
         self.datacollector = mesa.DataCollector(model_reporters={"Número de abelhas": self.collect_abelha,
                                                                  "Número de zangões": self.collect_zangao,
                                                                  "Número de defensoras": self.collect_defensora})
-
+       
     # Código para o gráfico
     def collect_abelha(self):
         return len(self.quantidade_abelha)
@@ -96,9 +102,6 @@ class Colmeia(Model):
             self.grid.remove_agent(x)
             self.schedule.remove(x)
         self.kill_list = []
-
-
-
 
     def create_bee(self, agent):
             queen_group_color = utils.get_group_color(self.groups, (agent.pos[0], agent.pos[1]))

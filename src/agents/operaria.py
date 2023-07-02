@@ -1,10 +1,12 @@
 from mesa import Agent
 
 class Operaria(Agent):
-    def __init__(self, unique_id, model,pos):
+    def __init__(self, unique_id, model, pos, posRainha):
         super().__init__(unique_id, model)
         self.tipo = "Operaria"
         self.vida_maxima = 80
+        self.pos = pos
+        self.posRainha = posRainha
         self.vida = self.vida_maxima
 
     def step(self):
