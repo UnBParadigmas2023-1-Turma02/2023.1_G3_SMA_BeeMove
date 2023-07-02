@@ -19,9 +19,7 @@
 | Vitor Eduardo Kühl Rodrigues | 190118288 |
 
 ## Sobre 
-Descreva o seu projeto em linhas gerais. 
-Use referências, links, que permitam conhecer um pouco mais sobre o projeto.
-Capriche nessa seção, pois ela é a primeira a ser lida pelos interessados no projeto.
+O projeto simula o ambiente de uma colmeia, onde múltiplos agentes interagem. Os agentes incluem zangões, operárias, abelha rainha e comida (pólen de flor). Cada agente tem seu comportamento específico. Os zangões desempenham funções reprodutivas, as operárias realizam tarefas como coletar alimentos e construir favos, enquanto a abelha rainha é responsável pela reprodução e manutenção da colmeia. A comida é um recurso necessário para a sobrevivência da colmeia. A simulação permite observar a dinâmica e as interações entre os diferentes agentes no ambiente da colmeia.
 
 ## Screenshots
 Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcionamento.
@@ -29,9 +27,14 @@ Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcioname
 ## Instalação 
 **Linguagens**: Python<br>
 **Tecnologias**: Mesa<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
-Insira um manual ou um script para auxiliar ainda mais.
-Gifs animados e outras ilustrações são bem-vindos!
+Certifique-se de ter o pacote Mesa instalado. Se não tiver, execute o seguinte comando no terminal:
+```bash
+$ pip install mesa
+```
+Após a instalação do Mesa, execute o projeto. No terminal, navegue até o diretório raiz do projeto e execute o seguinte comando:
+```bash
+$ mesa runserver
+```
 
 ## Uso 
 Explique como usar seu projeto.
@@ -39,14 +42,7 @@ Procure ilustrar em passos, com apoio de telas do software, seja com base na int
 Nessa seção, deve-se revelar de forma clara sobre o funcionamento do software.
 
 ## Vídeo
-Adicione 1 ou mais vídeos com a execução do projeto.
-Procure: 
-(i) Introduzir o projeto;
-(ii) Mostrar passo a passo o código, explicando-o, e deixando claro o que é de terceiros, e o que é contribuição real da equipe;
-(iii) Apresentar particularidades do Paradigma, da Linguagem, e das Tecnologias, e
-(iV) Apresentar lições aprendidas, contribuições, pendências, e ideias para trabalhos futuros.
-OBS: TODOS DEVEM PARTICIPAR, CONFERINDO PONTOS DE VISTA.
-TEMPO: +/- 15min
+
 
 ## Participações
 Apresente, brevemente, como cada membro do grupo contribuiu para o projeto.
