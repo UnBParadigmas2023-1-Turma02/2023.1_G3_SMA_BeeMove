@@ -1,4 +1,4 @@
-from asyncio.windows_events import INFINITE
+#from asyncio.windows_events import INFINITE
 from mesa import Agent
 from src.utils import calculate_distance, get_random_number
 import math
