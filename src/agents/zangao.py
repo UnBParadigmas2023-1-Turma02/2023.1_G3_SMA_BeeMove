@@ -41,16 +41,17 @@ class Zangao(Agent):
             
             self.model.grid.move_agent(self, (xAtual, yAtual))
             if self.pos == self.posRainha.pos:
+                self.model.kill_list.append(self)
                 self.reproduzir_com_rainha(self.posRainha)
-                if self.vida <= 0:
-                    self.model.kill_list.append(self)
 
     def reproduzir_com_rainha(self, rainha):
         # Verifica se a reprodução é bem-sucedida
         if rainha.tipo == "Rainha" and self.vida > 0:
-            self.vida = -1
-            probabilidade = get_random_number(0, 100)
-            if probabilidade <= 60:
+            if self.model.glob.get_qtd_zangoes() == 1:
+                probabilidade = 1
+            else:
+                probabilidade = get_random_number(0, 100)
+            if probabilidade <= 80:
                 # Reprodução bem-sucedida, cria nova abelha
                 #print(self)
                 rainha.reproduzir(rainha)

@@ -38,21 +38,33 @@ class AbelhaRainha(Agent):
         # self.model.create_bee(self)
         # Criar novas abelhas na colmeia (modelo)
         num_filhotes = utils.get_random_number(5,8)
+        cria_zangao = False
+        zangoes_mortos = 0
 
-        for _ in range(num_filhotes):
+        #laço para saber a quantidade de zangões que estão na lista para morrerem (já procriaram)
+        for i in range(len(self.model.kill_list)):
+            agent = self.model.kill_list[i]
+            if type(agent) is Zangao:
+                zangoes_mortos += 1
+
+        for i in range(num_filhotes):
             radius = utils.get_random_number(1, 20)
             xInitial = agent.pos[0] - (radius + utils.get_random_number(-3,3))
             yInitial = agent.pos[1] - (radius + utils.get_random_number(-3,3))
             probabilidade = utils.get_random_number(0, 100)
-            
-            if probabilidade <= 40:
+
+            if self.model.glob.get_qtd_zangoes() - zangoes_mortos <= 1:
+                    cria_zangao = True
+                    abelha = Zangao(self.model.next_id(), self.model, (xInitial,yInitial),  self)
+                    self.model.glob.set_qtd_zangoes(False)
+            elif probabilidade <= 30 and cria_zangao == True:
                 abelha = Zangao(self.model.next_id(), self.model, (xInitial,yInitial),  self)
                 self.model.glob.set_qtd_zangoes(False)
-            elif probabilidade <= 80:
-                abelha = Operaria(self.model.next_id(), self.model,(xInitial,yInitial), self)
-                self.model.glob.set_qtd_operarias(False)
-            elif probabilidade <= 100:
+            elif probabilidade <= 60:
                 abelha = Defensora(self.model.next_id(), self.model,(xInitial,yInitial))
                 self.model.glob.set_qtd_defensoras(False)
+            elif probabilidade <= 100:
+                abelha = Operaria(self.model.next_id(), self.model,(xInitial,yInitial), self)
+                self.model.glob.set_qtd_operarias(False)
                 
             self.model.create_bee(abelha)
