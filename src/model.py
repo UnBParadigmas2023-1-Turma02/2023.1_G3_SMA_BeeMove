@@ -61,8 +61,8 @@ class Colmeia(Model):
             self.register(q)
 
         # Iniciar flor
-        # self.comida = Comida(self.next_id(), self, self.raio_flor)
-        # self.register(self.comida)
+        self.comida = Comida(self.next_id(), self, self.raio_flor)
+        self.register(self.comida)
             
         # Inicializar Zangao
         for abelha in range(self.colmeia_inicial):
