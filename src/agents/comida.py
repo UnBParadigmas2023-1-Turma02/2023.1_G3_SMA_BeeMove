@@ -7,6 +7,8 @@ class Flor(Agent):
         self.pos = pos
         self.flor = flor
 
+    def come(self):
+        self.flor.remove_flor(self)
 
 
 class Comida(Agent):
@@ -16,9 +18,6 @@ class Comida(Agent):
         self.raio = raio_flor
         self.flores = 0
         self.cria_flores()
-
-    def come(self):
-        self.remove_flor(self)
 
     def step(self):
         if self.flores == 0:
