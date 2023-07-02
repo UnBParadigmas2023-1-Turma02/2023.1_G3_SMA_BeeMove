@@ -1,4 +1,5 @@
 import mesa
+from src.agents.zangao import Zangao
 import src.utils as utils
 from mesa import Model, Agent
 from mesa.time import SimultaneousActivation
@@ -48,6 +49,13 @@ class Colmeia(Model):
             x, y, _ = self.groups[abelha % self.colmeia_inicial]
             q = AbelhaRainha(self.next_id(),self, (x, y))
             self.register(q)
+            
+            
+        # Inicializar Zangao
+        for abelha in range(self.colmeia_inicial):
+            x, y, _ = self.groups[abelha % self.colmeia_inicial]
+            m = Zangao(self.next_id(), self, utils.random_pos(self.width, self.height), -1)
+            self.register(m)
 
         self.datacollector = mesa.DataCollector(model_reporters={"Número de abelhas": self.collect_abelha,
                                                                  "Número de zangões": self.collect_zangao,
@@ -69,6 +77,7 @@ class Colmeia(Model):
     def step(self):
         self.schedule.step()
         self.datacollector.collect(self)
+        
         for x in self.kill_agents:
             self.grid.remove_agent(x)
             self.schedule.remove(x)

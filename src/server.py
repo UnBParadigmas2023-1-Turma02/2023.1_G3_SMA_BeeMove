@@ -3,7 +3,7 @@ from mesa.visualization.modules import ChartModule
 
 from src.model import Colmeia
 from src.render import render
-from src.portrail import agentPortrayal
+from src.portrayal import agentPortrayal
 
 chart_element = ChartModule([{"Label": "Número de abelhas", "Color": "blue"},
                              {"Label": "Número de zangões", "Color": "black"},
@@ -19,7 +19,7 @@ model_params = {
         "População inicial de zangões", 2, 1, 10
     ),
     "colmeia_inicial": mesa.visualization.Slider(
-        "Quantidade inicial de colmeias", 1, 1, 10
+        "Quantidade inicial de colmeias", 1, 1, 3
     ),
     "vida_adicional": mesa.visualization.Slider(
         "Vida adicional ao se alimentar", 50, 1, 100
