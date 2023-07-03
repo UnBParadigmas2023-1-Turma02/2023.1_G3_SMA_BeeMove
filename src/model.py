@@ -71,7 +71,11 @@ class Colmeia(Model):
         
         # Iniciar flor
         for _ in range(self.quantidade_flores):
-            comida = Flor(self.next_id(), self, (random.randint(0, self.grid.width), random.randint(0, self.grid.height)), random.randint(1, 100), "Flor")
+            comida = Flor(self.next_id(),
+                          self, 
+                          (self.random.randint(0, self.grid.width), 
+                          self.random.randint(0, self.grid.height)), 
+                          1000, "Flor")
             self.register(comida)
             
         # Inicializar Zangao
@@ -135,5 +139,7 @@ class Colmeia(Model):
             self.register(new_ant)
 
     def register(self, agent: Agent):
-        self.grid.place_agent(agent, agent.pos)
+        if agent.pos:
+            self.grid.place_agent(agent, agent.pos)
+
         self.schedule.add(agent)
