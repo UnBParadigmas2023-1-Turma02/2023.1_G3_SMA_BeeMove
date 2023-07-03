@@ -3,10 +3,11 @@ from src.utils import random_pos
 import random
 
 class Flor(Agent):
-    def __init__(self, current_id, model, pos, nectar):
+    def __init__(self, current_id, model, pos, nectar, tipo):
         super().__init__(current_id, model)
         self.pos = pos
         self.nectar = nectar
+        self.tipo = "Flor"
 
     def step(self):
         # if self.nectar <= 0 # if self.flores <= 0:
