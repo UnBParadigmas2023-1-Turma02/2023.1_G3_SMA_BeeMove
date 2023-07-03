@@ -3,4 +3,4 @@
 - **Projeto**
     - [História](./pages/historia.md)
     - [Aspectos Técnicos](./pages/projeto.md)
-    - [Agentes](./pages/agentes.md)
+    - [Agentes](./pages/Agentes.md)
