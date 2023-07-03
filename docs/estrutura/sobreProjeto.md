@@ -1,3 +1,0 @@
-# BeeMove
-
-## Sobre
