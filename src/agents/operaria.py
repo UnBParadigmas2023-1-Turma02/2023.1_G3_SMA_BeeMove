@@ -127,8 +127,8 @@ class Operaria(Agent):
                         flor = Flor(
                                 self.model.next_id(), 
                                 self.model, 
-                                (self.random.randint(0, agente.pos[0] + 7 % self.model.grid.width), 
-                                self.random.randint(0, (agente.pos[1] + 7) % self.model.grid.height )), 
+                                (self.random.randint(0, agente.pos[0] + 7 % (self.model.grid.width - 1)), 
+                                self.random.randint(0, (agente.pos[1] + 7) % (self.model.grid.height -1))), 
                                 self.random.randint(1, 5), "Flor")
                         self.polen = 0
                         self.model.register(flor)
