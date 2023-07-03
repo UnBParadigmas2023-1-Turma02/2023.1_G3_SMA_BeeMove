@@ -20,7 +20,7 @@ class AbelhaRainha(Agent):
     def step(self):
         # # Verifica a vida da abelha rainha e se adiciona na lista de mortos
         if self.vida <= 0:
-            self.model.kill_agents.append(self)
+            self.model.kill_list.append(self)
         else:
             self.vida -= 1
             
@@ -32,7 +32,8 @@ class AbelhaRainha(Agent):
         #     self.reproduzir_contagem -= 1
         
     def alimentar_rainha(self, agent):
-        self.vida = min(self.vida + self.alimento, self.vida_maxima)
+        self.vida = min(self.vida + agent.alimento, self.vida_maxima)
+        print(f'alimentando - vida: {self.vida}')
 
     def reproduzir(self, agent):
         # self.model.create_bee(self)
