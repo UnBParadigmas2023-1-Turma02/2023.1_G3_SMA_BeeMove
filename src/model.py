@@ -46,9 +46,6 @@ class Colmeia(Model):
 
         self.kill_list = []
 
-        # Esses valores devem ser integrados ao código depois, para atualizar constantemente os seus valores
-        self.quantidade_abelha = [1, 2, 3, 4]
-        self.quantidade_zangao = [1, 2, 3]
         self.quantidade_flores = quantidade_flores
         self.quantidade_defensora = quantidade_defensora
 
@@ -97,17 +94,6 @@ class Colmeia(Model):
                                                                  "Número de operárias": lambda m: m.qtd_operarias
                                                                  })
        
-    # Código para o gráfico
-    def collect_abelha(self):
-        return len(self.quantidade_abelha)
-
-    def collect_zangao(self):
-        return len(self.quantidade_zangao)
-
-    def collect_defensora(self):
-        # Esse retorno deve seguir o padrão das funções anteriores
-        # Está assim apenas para testes!!!!!!!!!!!!!!!!!!!!!!!!
-        return self.quantidade_defensora
     
     def atualiza_qtds(self):
         self.qtd_abelhas = self.glob.get_qtd_abelhas()
