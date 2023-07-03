@@ -10,6 +10,9 @@ class Defensora(Agent):
         self.poder_ataque = 10
         self.pos = pos
 
+    def step(self):
+        self.vida -= 1
+
     def detecta_ameaca(self):
         neighbors = self.model.grid.get_neighbors(self.pos, moore=True)
         for neighbor in neighbors:

@@ -4,13 +4,16 @@ from mesa.visualization.modules import ChartModule
 from src.model import Colmeia
 from src.portrayal import agentPortrayal
 
+
 chart_element = ChartModule([{"Label": "Número de abelhas", "Color": "blue"},
                              {"Label": "Número de zangões", "Color": "black"},
                              {"Label": "Número de defensoras", "Color": "red"},
                              {"Label": "Número de operárias", "Color": "green"},
                              ])
 
+
 canvas_element = mesa.visualization.CanvasGrid(agentPortrayal, 20, 20, 600, 600)
+
 
 model_params = {
     "abelhas_iniciais": mesa.visualization.Slider(
@@ -38,5 +41,6 @@ model_params = {
 server = mesa.visualization.ModularServer(
     Colmeia, [canvas_element, chart_element], "Colmeia", model_params
 )
+
 
 server.port = 8521

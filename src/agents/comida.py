@@ -8,6 +8,8 @@ class Flor(Agent):
         self.pos = pos
         self.nectar = nectar
         self.tipo = "Flor"
+        
+        print(f'Nectar: {self.nectar}')
 
     def step(self):
         # if self.nectar <= 0 # if self.flores <= 0:
@@ -17,12 +19,12 @@ class Flor(Agent):
 
     def remove_flor(self):
         # self.flores -= 1
-        self.model.grid.remove_agent(self)
+        if not self.pos is None: 
+            self.model.grid.remove_agent(self)
 
     def come(self):
-        if self.nectar <= 0:
-            self.flor.remove_flor(self)
-        self.nectar -= 1
+        if self.nectar > 0:
+            self.nectar -= 1
 
 
 # class Comida(Agent):

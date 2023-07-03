@@ -24,6 +24,7 @@ class Zangao(Agent):
         #         if calculate_distance(self.pos, queen.pos) < menor:
         #             escolhida = queen 
 
+        if self.posRainha:
             dx = self.posRainha.pos[0] - self.pos[0]    
             dy = self.posRainha.pos[1] - self.pos[1]
 
