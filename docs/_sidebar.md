@@ -1,7 +1,6 @@
-- **BeeMove**
-
-  - **Dados**
-
-    - [Sobre o Bee Move](estrutura/sobreProjeto.md)
-    - [Código](estrutura/sobreCodigo.md)
-
+- **Equipe**
+    - [Membros](./pages/team.md)
+- **Projeto**
+    - [História](./pages/historia.md)
+    - [Aspectos Técnicos](./pages/projeto.md)
+    - [Agentes](./pages/agentes.md)
