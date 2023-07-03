@@ -73,15 +73,15 @@ class Colmeia(Model):
         for _ in range(self.quantidade_flores):
             comida = Flor(self.next_id(),
                           self, 
-                          (self.random.randint(0, self.grid.width), 
-                          self.random.randint(0, self.grid.height)), 
+                          (self.random.randint(0, (self.grid.width - 1)), 
+                          self.random.randint(0, (self.grid.height - 1))), 
                           1000, "Flor")
             self.register(comida)
             
         # Inicializar Zangao
         for abelha in range(self.colmeia_inicial):
             x, y, _ = self.groups[abelha % self.colmeia_inicial]
-            m = Zangao(self.next_id(), self, utils.random_pos(self.width, self.height), rainhas[0])
+            m = Zangao(self.next_id(), self, utils.random_pos(self.width-1, self.height-1), rainhas[0])
             self.register(m)
 
         # Iniciar Operaria
