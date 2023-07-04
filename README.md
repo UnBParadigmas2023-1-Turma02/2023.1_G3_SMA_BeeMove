@@ -48,16 +48,16 @@ https://youtu.be/eTq0qUlhdtQ
 Apresente, brevemente, como cada membro do grupo contribuiu para o projeto.
 |Nome do Membro | Contribuição | Significância da Contribuição para o Projeto (Excelente/Boa/Regular/Ruim/Nula) |
 | -- | -- | :-: |
-| Adrian Soares Lopes | ambiente estrutura do model e organização repositório  | Excelente |
-| Bianca Sofia Brasil de Oliveira | Agente flor, estrutura do model e organização repositório | Excelente |
-| Daniel Vinicius Ribeiro Alves | Gráfico, estrutura do model e organização repositório  | Excelente |
-| Daniela Soares de Oliveira | agente flor, estrutura do model e organização repositório  | Excelente |
-| Eduardo Maia Rezende | Agente Zangão, estrutura do model e organização repositório | Excelente |
-| Erick Melo Vidal de Oliveira | Render,server, estrutura do model e organização repositório | Excelente |
-| João Victor Max Bisinotti de Oliveira | Agente operaria estrutura do model e organização repositório | Excelente |
-| Klyssmann Henrique Ferreira de Oliveira | Agente rainha,  | Excelente |
-| Mariana Oliveira Pires do Rio | agente operaria estrutura do model e organização repositório  | Excelente |
-| Vitor Eduardo Kühl Rodrigues |Agente Zangão, estrutura do model e organização repositório | Excelente |
+| Adrian Soares Lopes | Frontend, estrutura dos agentes e organização do repositório | Excelente |
+| Bianca Sofia Brasil de Oliveira | estrutura dos agentes e organização do repositório | Excelente |
+| Daniel Vinicius Ribeiro Alves | Frontend, gráficos dinâmicos e organização do repositório | Excelente |
+| Daniela Soares de Oliveira | estrutura dos agentes e organização repositório | Excelente |
+| Eduardo Maia Rezende | Frontend, estrutura dos agentes e organização do repositórios | Excelente |
+| Erick Melo Vidal de Oliveira | Frontend, estrutura dos agentes e organização do repositório | Excelente |
+| João Victor Max Bisinotti de Oliveira | estrutura dos agentes e organização repositórios | Excelente |
+| Klyssmann Henrique Ferreira de Oliveira | Frontend, estrutura dos agentes e organização do repositório | Excelente |
+| Mariana Oliveira Pires do Rio | estrutura dos agentes e organização repositório | Excelente |
+| Vitor Eduardo Kühl Rodrigues | estrutura dos agentes e organização repositório | Excelente |
 
 ## Outros 
 Quaisquer outras informações sobre o projeto podem ser descritas aqui. Não esqueça, entretanto, de informar sobre:
