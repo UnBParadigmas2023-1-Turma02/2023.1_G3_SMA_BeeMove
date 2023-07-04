@@ -23,6 +23,8 @@ O projeto simula o ambiente de uma colmeia, onde múltiplos agentes interagem. O
 
 ## Screenshots
 
+![Defensoras](./docs/img/image.jpeg)
+
 ![Defensoras](./docs/img/screenshot1.png)
 
 ## Instalação 
@@ -41,7 +43,7 @@ $ mesa runserver
 Lembre-se de garantir a versão do python como `python v3.11` 
 ## Vídeo
 
-https://youtu.be/eTq0qUlhdtQ
+https://youtu.be/jafJV9tntHE
 
 ## Participações
 Apresente, brevemente, como cada membro do grupo contribuiu para o projeto.
