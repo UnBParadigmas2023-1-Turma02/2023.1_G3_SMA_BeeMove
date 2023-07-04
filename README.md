@@ -22,7 +22,8 @@
 O projeto simula o ambiente de uma colmeia, onde múltiplos agentes interagem. Os agentes incluem zangões, operárias, abelha rainha e comida (pólen de flor). Cada agente tem seu comportamento específico. Os zangões desempenham funções reprodutivas, as operárias realizam tarefas como coletar alimentos e construir favos, enquanto a abelha rainha é responsável pela reprodução e manutenção da colmeia. A comida é um recurso necessário para a sobrevivência da colmeia. A simulação permite observar a dinâmica e as interações entre os diferentes agentes no ambiente da colmeia.
 
 ## Screenshots
-Adicione 2 ou mais screenshots do projeto em termos de interface e/ou funcionamento.
+
+![Defensoras](./docs/img/screenshot1.png)
 
 ## Instalação 
 **Linguagens**: Python<br>
@@ -31,33 +32,32 @@ Certifique-se de ter o pacote Mesa instalado. Se não tiver, execute o seguinte 
 ```bash
 $ pip install mesa
 ```
-Após a instalação do Mesa, execute o projeto. No terminal, navegue até o diretório raiz do projeto e execute o seguinte comando:
+
+## Uso 
+Para rodar a simulação após a instalação do mesa, No terminal, navegue até o diretório raiz do projeto e execute o seguinte comando:
 ```bash
 $ mesa runserver
 ```
-
-## Uso 
-Explique como usar seu projeto.
-Procure ilustrar em passos, com apoio de telas do software, seja com base na interface gráfica, seja com base no terminal.
-Nessa seção, deve-se revelar de forma clara sobre o funcionamento do software.
+Dar o start na aplicação que a simulação começa.
 
 ## Vídeo
 
+https://youtu.be/eTq0qUlhdtQ
 
 ## Participações
 Apresente, brevemente, como cada membro do grupo contribuiu para o projeto.
 |Nome do Membro | Contribuição | Significância da Contribuição para o Projeto (Excelente/Boa/Regular/Ruim/Nula) |
 | -- | -- | :-: |
-| Adrian Soares Lopes | - | - |
-| Bianca Sofia Brasil de Oliveira | - | - |
-| Daniel Vinicius Ribeiro Alves | - | - |
-| Daniela Soares de Oliveira | - | - |
-| Eduardo Maia Rezende | - | - |
-| Erick Melo Vidal de Oliveira | - | - |
-| João Victor Max Bisinotti de Oliveira | - | - |
-| Klyssmann Henrique Ferreira de Oliveira | - | - |
-| Mariana Oliveira Pires do Rio | - | - |
-| Vitor Eduardo Kühl Rodrigues |- | - |
+| Adrian Soares Lopes | ambiente estrutura do model e organização repositório  | Excelente |
+| Bianca Sofia Brasil de Oliveira | Agente flor, estrutura do model e organização repositório | Excelente |
+| Daniel Vinicius Ribeiro Alves | Gráfico, estrutura do model e organização repositório  | Excelente |
+| Daniela Soares de Oliveira | agente flor, estrutura do model e organização repositório  | Excelente |
+| Eduardo Maia Rezende | Agente Zangão, estrutura do model e organização repositório | Excelente |
+| Erick Melo Vidal de Oliveira | Render,server, estrutura do model e organização repositório | Excelente |
+| João Victor Max Bisinotti de Oliveira | Agente operaria estrutura do model e organização repositório | Excelente |
+| Klyssmann Henrique Ferreira de Oliveira | Agente rainha,  | Excelente |
+| Mariana Oliveira Pires do Rio | agente operaria estrutura do model e organização repositório  | Excelente |
+| Vitor Eduardo Kühl Rodrigues |Agente Zangão, estrutura do model e organização repositório | Excelente |
 
 ## Outros 
 Quaisquer outras informações sobre o projeto podem ser descritas aqui. Não esqueça, entretanto, de informar sobre:
@@ -67,5 +67,6 @@ Quaisquer outras informações sobre o projeto podem ser descritas aqui. Não es
 (iV) Trabalhos Futuros.
 
 ## Fontes
-Referencie, adequadamente, as referências utilizadas.
-Indique ainda sobre fontes de leitura complementares.
+[A.B.EL.H.A](https://abelha.org.br/)<br>
+[Morfologia das Abelhas e Sistemas](https://pt.slideshare.net/candidoalice/morfologia-das-abelhas-e-sistemas)<br>
+
