@@ -60,11 +60,30 @@ Apresente, brevemente, como cada membro do grupo contribuiu para o projeto.
 | Vitor Eduardo Kühl Rodrigues | estrutura dos agentes e organização repositório | Excelente |
 
 ## Outros 
-Quaisquer outras informações sobre o projeto podem ser descritas aqui. Não esqueça, entretanto, de informar sobre:
-(i) Lições Aprendidas;
-(ii) Percepções;
-(iii) Contribuições e Fragilidades, e
-(iV) Trabalhos Futuros.
+(i) Lições Aprendidas:
+
+Importância de pensar de forma abstrata ao projetar e interagir com agentes.
+Necessidade de buscar soluções ad-hoc para resolver algumas comunicações entre os agentes.
+Aprendizado sobre o comportamento dos agentes ao vê-los executando.
+
+(ii) Percepções:
+
+Percepção do poder dos sistemas computacionais na simulação de sistemas complexos.
+Descoberta das possibilidades e aplicabilidade da abordagem de sistemas multiagentes em várias áreas.
+Interesse despertado pela capacidade dos agentes autônomos em tomar decisões independentes.
+
+(iii) Contribuições e Fragilidades:
+
+Flexibilidade e escalabilidade proporcionadas pelo MESA, permitindo a personalização dos agentes e ambientes.
+Utilização de ferramentas pré-construídas e visualização interativa em tempo real do MESA.
+Dificuldades na comunicação entre os agentes e possibilidade de implementação mais robusta com um framework com protocolos mais rígidos.
+
+(iv) Trabalhos Futuros:
+
+Explorar mais as possibilidades do paradigma de sistemas multiagentes.
+Aprofundar os estudos sobre o comportamento e interações dos agentes em simulações.
+Buscar soluções para a comunicação entre os agentes de forma mais eficiente e robusta.
+Continuar colaborando e compartilhando conhecimentos com a comunidade de usuários de MESA em Python
 
 ## Fontes
 [A.B.EL.H.A](https://abelha.org.br/)<br>
