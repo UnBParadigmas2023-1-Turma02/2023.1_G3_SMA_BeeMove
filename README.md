@@ -38,7 +38,6 @@ Para rodar a simulação após a instalação do mesa, No terminal, navegue até
 ```bash
 $ mesa runserver
 ```
-Dar o start na aplicação que a simulação começa.
 
 ## Vídeo
 
@@ -86,6 +85,6 @@ Buscar soluções para a comunicação entre os agentes de forma mais eficiente 
 Continuar colaborando e compartilhando conhecimentos com a comunidade de usuários de MESA em Python
 
 ## Fontes
-[A.B.EL.H.A](https://abelha.org.br/)<br>
+[A.B.E.L.H.A](https://abelha.org.br/)<br>
 [Morfologia das Abelhas e Sistemas](https://pt.slideshare.net/candidoalice/morfologia-das-abelhas-e-sistemas)<br>
 
