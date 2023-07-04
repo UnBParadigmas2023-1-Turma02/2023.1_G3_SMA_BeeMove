@@ -26,7 +26,7 @@ O projeto simula o ambiente de uma colmeia, onde múltiplos agentes interagem. O
 ![Defensoras](./docs/img/screenshot1.png)
 
 ## Instalação 
-**Linguagens**: Python<br>
+**Linguagens**: Python v3.11 <br>
 **Tecnologias**: Mesa<br>
 Certifique-se de ter o pacote Mesa instalado. Se não tiver, execute o seguinte comando no terminal:
 ```bash
@@ -38,7 +38,7 @@ Para rodar a simulação após a instalação do mesa, No terminal, navegue até
 ```bash
 $ mesa runserver
 ```
-
+Lembre-se de garantir a versão do python como `python v3.11` 
 ## Vídeo
 
 https://youtu.be/eTq0qUlhdtQ
