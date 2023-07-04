@@ -48,16 +48,16 @@ Nessa seção, deve-se revelar de forma clara sobre o funcionamento do software.
 Apresente, brevemente, como cada membro do grupo contribuiu para o projeto.
 |Nome do Membro | Contribuição | Significância da Contribuição para o Projeto (Excelente/Boa/Regular/Ruim/Nula) |
 | -- | -- | :-: |
-| Adrian Soares Lopes | - | - |
-| Bianca Sofia Brasil de Oliveira | - | - |
-| Daniel Vinicius Ribeiro Alves | - | - |
-| Daniela Soares de Oliveira | - | - |
-| Eduardo Maia Rezende | - | - |
-| Erick Melo Vidal de Oliveira | - | - |
-| João Victor Max Bisinotti de Oliveira | - | - |
-| Klyssmann Henrique Ferreira de Oliveira | - | - |
-| Mariana Oliveira Pires do Rio | - | - |
-| Vitor Eduardo Kühl Rodrigues |- | - |
+| Adrian Soares Lopes | Frontend, estrutura dos agentes e organização do repositório | Excelente |
+| Bianca Sofia Brasil de Oliveira | estrutura dos agentes e organização do repositório | Excelente |
+| Daniel Vinicius Ribeiro Alves | Frontend, gráficos dinâmicos e organização do repositório | Excelente |
+| Daniela Soares de Oliveira | estrutura dos agentes e organização repositório | Excelente |
+| Eduardo Maia Rezende | Frontend, estrutura dos agentes e organização do repositórios | Excelente |
+| Erick Melo Vidal de Oliveira | Frontend, estrutura dos agentes e organização do repositório | Excelente |
+| João Victor Max Bisinotti de Oliveira | estrutura dos agentes e organização repositórios | Excelente |
+| Klyssmann Henrique Ferreira de Oliveira | Frontend, estrutura dos agentes e organização do repositório | Excelente |
+| Mariana Oliveira Pires do Rio | estrutura dos agentes e organização repositório | Excelente |
+| Vitor Eduardo Kühl Rodrigues | estrutura dos agentes e organização repositório | Excelente |
 
 ## Outros 
 Quaisquer outras informações sobre o projeto podem ser descritas aqui. Não esqueça, entretanto, de informar sobre:
